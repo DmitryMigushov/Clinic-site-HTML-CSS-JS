@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Онлайн клиника</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img class="logo" img src="logo.png" alt="logo">
+        <div class="header-in">
+            <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">О нас</div>
+            <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'specialist'});">Наши спецаилисты</div>
+            <div class='nav-item'>Запись</div>
+            <div class='nav-item'>FAQ</div>
+        </div>
+        <img class="icon" img src="m1.png" alt="logo">
+
+    </body>
+    </header>
+
+    <div class='main-b'>
+        <div class = 'main-banner'>
+            <div class = 'ban-left'>
+                <div class='black-but'>
+                    <p-inner2>ЗАПИСАТЬСЯ</p-inner2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section class='main-c' id='about'>
+        <div class='about-wrapper'>
+            <h1>О нас</h1>
+            <p>В режиме самоизоляции у многих остались вопросы, нерешенные проблемы касательно своего здоровья. У некоторых появилось дополнительное свободное время, которое можно использовать для заботы о здоровье и для планирования материнства.</i>.</p>
+            <p>Другие пациенты уже успели побывать на первичном приеме или начать лечение, но в связи с эпидемиологической ситуацией вынуждены отложить свои планы. Онлайн-консультирование отлично подходит для всех.</p>
+            <p>В онлайн-формате врач соберет ваш анамнез. Вы расскажете о проблеме, покажете доктору результаты анализов и заключения других врачей, а он задаст вам вопросы и даст все необходимые рекомендации.</p>
+            <p>Добро пожаловать в <b>новый мир</b>.</p>
+        </div>
+    </section>
+    
+    <div class='main-d' id='specialist'>
+        <h1>Наши специалисты</h1>
+        <div class = 'cards'>
+            <div class = card>
+                <img class="spec" img src="s1.png" alt="logo">
+                <h3>Виталий Олегович Цаль</h3>
+                <p>Психотерапевт</p>
+            </div>
+            <div class = card>
+                <img class="spec" img src="s2.png" alt="logo">
+                <h3>Мигушов Дмитрий Андреевич</h3>
+                <p>Терапевт</p>
+            </div>
+            <div class = card>
+                <img class="spec" img src="s3.png" alt="logo">
+                <h3>Ринат Драйв Гослингов</h3>
+                <p>Травматолог</p>
+            </div>
+            <div class = card>
+                <img class="spec" img src="s4.png" alt="logo">
+                <h3>Каткова Екатерина Иванова</h3>
+                <p>Отоларинголог</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer-in">
+            <div class='nav-item2'>О нас</div>
+            <div class='nav-item2'>Наши спецаилисты</div>
+            <div class='nav-item2'>Запись</div>
+            <div class='nav-item2'>FAQ</div>
+        </div>
+        <img class="icon2" img src="f1.png" alt="logo" href = 'https://vk.com/feed'>
+    </div>
+
+    <div class="footer2">
+        <img class="logo" img src="logo.png" alt="logo">
+        <div class="footer-in-dop">
+            <input type="email" id="email" pattern=".+@example\.com" size="30" required />
+            <div class='white-but'>
+                <p-inner>Записаться</p-inner>
+            </div>
+        </div>
+    </div>
+
+</html>
