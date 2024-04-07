@@ -11,18 +11,17 @@
         <div class="header-in">
             <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'});">О нас</div>
             <div class='nav-item' onclick="document.getElementById('about').scrollIntoView({behavior: 'specialist'});">Наши спецаилисты</div>
-            <div class='nav-item'>Запись</div>
+            <div class='nav-item' id="b2">Запись</div>
             <div class='nav-item'>FAQ</div>
         </div>
         <img class="icon" img src="m1.png" alt="logo">
-
     </body>
     </header>
 
     <div class='main-b'>
         <div class = 'main-banner'>
             <div class = 'ban-left'>
-                <div class='black-but'>
+                <div class='black-but' onclick="subscribe()">
                     <p-inner2>ЗАПИСАТЬСЯ</p-inner2>
                 </div>
             </div>
@@ -30,9 +29,9 @@
     </div>
     <section class='main-c' id='about'>
         <div class='about-wrapper'>
-            <h1>О нас</h1>
+            <h1>О 1111нас</h1>
             <p>В режиме самоизоляции у многих остались вопросы, нерешенные проблемы касательно своего здоровья. У некоторых появилось дополнительное свободное время, которое можно использовать для заботы о здоровье и для планирования материнства.</i>.</p>
-            <p>Другие пациенты уже успели побывать на первичном приеме или начать лечение, но в связи с эпидемиологической ситуацией вынуждены отложить свои планы. Онлайн-консультирование отлично подходит для всех.</p>
+            <p id = 'text2'>Другие пациенты уже успели побывать на первичном приеме или начать лечение, но в связи с эпидемиологической ситуацией вынуждены отложить свои планы. Онлайн-консультирование отлично подходит для всех.</p>
             <p>В онлайн-формате врач соберет ваш анамнез. Вы расскажете о проблеме, покажете доктору результаты анализов и заключения других врачей, а он задаст вам вопросы и даст все необходимые рекомендации.</p>
             <p>Добро пожаловать в <b>новый мир</b>.</p>
         </div>
@@ -85,5 +84,5 @@
             </div>
         </div>
     </div>
-
+    <script src="script.js"></script>
 </html>

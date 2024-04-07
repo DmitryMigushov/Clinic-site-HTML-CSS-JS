@@ -165,6 +165,9 @@ input {
     text-align: center;
 
 }
+.black-but:hover {
+    cursor: pointer;
+    }
 
 p-inner {
     position: absolute;
@@ -191,7 +194,6 @@ p-inner2 {
     width: 100%;
     height: auto;
     background-color: #fff;
-
 }
 .main-c{
     padding-bottom: 50px;
