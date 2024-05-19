@@ -168,6 +168,8 @@ input {
 .black-but:hover {
     cursor: pointer;
     }
+    
+
 
 p-inner {
     position: absolute;
@@ -262,7 +264,20 @@ p {
     align-items: center;
     flex-direction: column;
     text-align: center;
+
+
+
 }
+
+#YMapsID {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 30%;
+}
+
 
 @media (max-width: 600px) {
     header {

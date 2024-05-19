@@ -4,6 +4,26 @@
     <meta charset="UTF-8">
     <title>Онлайн клиника</title>
     <link rel="stylesheet" href="style.css">
+
+    <script src="https://api-maps.yandex.ru/2.1?apikey=b07c57ce-b361-4b19-8ea1-e6371b0e3762&load=package.full&lang=ru_RU">
+    </script>
+    <script type="text/javascript">
+      ymaps.ready(function () {
+        var myMap = new ymaps.Map("YMapsID", {
+          center: [55.78660, 49.17033],
+          zoom: 17
+          
+        });
+
+        var myPlacemark = new ymaps.Placemark([55.78660, 49.17033]);
+
+        myMap.geoObjects.add(myPlacemark);
+
+      });
+    </script>
+
+    <script src="placemark.js" type="text/javascript"></script>
+
 </head>
 <body>
     <header>
@@ -29,14 +49,43 @@
     </div>
     <section class='main-c' id='about'>
         <div class='about-wrapper'>
-            <h1>О 1111нас</h1>
+            <h1>О нас</h1>
             <p>В режиме самоизоляции у многих остались вопросы, нерешенные проблемы касательно своего здоровья. У некоторых появилось дополнительное свободное время, которое можно использовать для заботы о здоровье и для планирования материнства.</i>.</p>
             <p id = 'text2'>Другие пациенты уже успели побывать на первичном приеме или начать лечение, но в связи с эпидемиологической ситуацией вынуждены отложить свои планы. Онлайн-консультирование отлично подходит для всех.</p>
             <p>В онлайн-формате врач соберет ваш анамнез. Вы расскажете о проблеме, покажете доктору результаты анализов и заключения других врачей, а он задаст вам вопросы и даст все необходимые рекомендации.</p>
             <p>Добро пожаловать в <b>новый мир</b>.</p>
+            <h1>Где нас найти?</h1>
         </div>
     </section>
-    
+
+
+
+    <div id="YMapsID" style="width: 500px; height: 350px;"></div>
+
+    <h1>YandexGPT Integration</h1>
+    <textarea id="prompt" rows="4" cols="50"></textarea><br>
+    <button id="submit">Submit</button>
+
+    <h2>Response</h2>
+    <pre id="response"></pre>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', async () => {
+            const prompt = document.getElementById('prompt').value;
+
+            const response = await fetch('http://localhost:5000/api/yandexgpt', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ prompt: prompt })
+            });
+
+            const data = await response.json();
+            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
+        });
+    </script>
+
     <div class='main-d' id='specialist'>
         <h1>Наши специалисты</h1>
         <div class = 'cards'>
@@ -86,5 +135,10 @@
             </div>
         </div>
     </div>
+
+    
+
+
     <script src="script.js"></script>
+
 </html>
