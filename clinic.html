@@ -62,29 +62,15 @@
 
     <div id="YMapsID" style="width: 500px; height: 350px;"></div>
 
-    <h1>YandexGPT Integration</h1>
-    <textarea id="prompt" rows="4" cols="50"></textarea><br>
-    <button id="submit">Submit</button>
-
-    <h2>Response</h2>
-    <pre id="response"></pre>
-
-    <script>
-        document.getElementById('submit').addEventListener('click', async () => {
-            const prompt = document.getElementById('prompt').value;
-
-            const response = await fetch('http://localhost:5000/api/yandexgpt', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ prompt: prompt })
-            });
-
-            const data = await response.json();
-            document.getElementById('response').textContent = JSON.stringify(data, null, 2);
-        });
-    </script>
+    <div class="container">
+        <h1>API запрос</h1>
+        <button id="fetchButton">Получить картинку</button>
+        <h2>Ответ</h2>
+        <div id="imageContainer" style="width: 500px; height: 320px;">
+            <img id="dogImage" src="" alt="Random Dog">
+        </div>
+    </div>
+    
 
     <div class='main-d' id='specialist'>
         <h1>Наши специалисты</h1>
@@ -135,9 +121,6 @@
             </div>
         </div>
     </div>
-
-    
-
 
     <script src="script.js"></script>
 
